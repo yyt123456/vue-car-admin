@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Layout from "../views/Layout"
+import Layout from "../views/Layout";
 Vue.use(VueRouter);
 const routes = [
   {
@@ -30,7 +30,7 @@ const routes = [
         meta: {
           title: "首页"
         },
-        component: () => import("../views/Console/index.vue"),
+        component: () => import("../views/Console/index.vue")
       }
     ]
   },
@@ -51,7 +51,7 @@ const routes = [
         meta: {
           title: "列表管理"
         },
-        component: () => import("../views/Parking/index.vue"),
+        component: () => import("../views/Parking/index.vue")
       },
       {
         path: "/parkingAdd",
@@ -59,7 +59,7 @@ const routes = [
         meta: {
           title: "新增停车场"
         },
-        component: () => import("../views/Parking/add.vue"),
+        component: () => import("../views/Parking/add.vue")
       }
     ]
   },
@@ -80,7 +80,7 @@ const routes = [
         meta: {
           title: "品牌列表"
         },
-        component: () => import("../views/carsBrand/index.vue"),
+        component: () => import("../views/carsBrand/index.vue")
       }
     ]
   },
@@ -101,7 +101,7 @@ const routes = [
         meta: {
           title: "车辆属性"
         },
-        component: () => import("../views/Cars/attrList.vue"),
+        component: () => import("../views/Cars/attrList.vue")
       },
       {
         path: "/carsIndex",
@@ -109,7 +109,7 @@ const routes = [
         meta: {
           title: "车辆列表"
         },
-        component: () => import("../views/Cars/index.vue"),
+        component: () => import("../views/Cars/index.vue")
       },
       {
         path: "/carsAdd",
@@ -117,7 +117,7 @@ const routes = [
         meta: {
           title: "新增车辆"
         },
-        component: () => import("../views/Cars/add.vue"),
+        component: () => import("../views/Cars/add.vue")
       }
     ]
   },
@@ -138,7 +138,7 @@ const routes = [
         meta: {
           title: "租车类型"
         },
-        component: () => import("../views/Sale/leaseList.vue"),
+        component: () => import("../views/Sale/leaseList.vue")
       }
     ]
   },
@@ -159,7 +159,7 @@ const routes = [
         meta: {
           title: "会员列表"
         },
-        component: () => import("../views/Member/index.vue"),
+        component: () => import("../views/Member/index.vue")
       },
       {
         path: "/memberInfo",
@@ -168,7 +168,7 @@ const routes = [
         meta: {
           title: "会员编辑"
         },
-        component: () => import("../views/Member/memberInfo.vue"),
+        component: () => import("../views/Member/memberInfo.vue")
       },
       {
         path: "/memberDetailed",
@@ -177,7 +177,7 @@ const routes = [
         meta: {
           title: "会员详情"
         },
-        component: () => import("../views/Member/detailed.vue"),
+        component: () => import("../views/Member/detailed.vue")
       }
     ]
   },
@@ -198,10 +198,10 @@ const routes = [
         meta: {
           title: "订单列表"
         },
-        component: () => import("../views/Order/index.vue"),
+        component: () => import("../views/Order/index.vue")
       }
     ]
-  },
+  }
 ];
 
 const router = new VueRouter({

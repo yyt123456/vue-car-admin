@@ -26,32 +26,33 @@ export default {
       default: false
     },
     data: {
-        type: Object,
-        default: () => {}
+      type: Object,
+      default: () => {}
     }
   },
   data() {
     return {
-        // 弹窗显示/关闭标记
-        dialogVisible: false
+      // 弹窗显示/关闭标记
+      dialogVisible: false
     };
   },
   methods: {
-    opened(){
+    opened() {
       this.$refs.aMap.mapCreate();
       // 调DOM元素的方法时，要确保DOM元素已被加载完成
-      this.$nextTick(() => { // DOM元素渲染完成后执行
+      this.$nextTick(() => {
+        // DOM元素渲染完成后执行
         const splitLnglat = this.data.lnglat.split(",");
         const lnglat = {
-            lng: splitLnglat[0],
-            lat: splitLnglat[1]
-        }
+          lng: splitLnglat[0],
+          lat: splitLnglat[1]
+        };
         this.$refs.aMap.setMarker(lnglat);
-      })
+      });
     },
     close() {
-        this.$refs.aMap.mapDestroy();
-        this.$emit("update:flagVisible", false); // {}
+      this.$refs.aMap.mapDestroy();
+      this.$emit("update:flagVisible", false); // {}
     }
   },
   watch: {
@@ -59,7 +60,7 @@ export default {
       handler(newValue, oldValue) {
         this.dialogVisible = newValue;
       }
-    },
+    }
     // parking_data: {
     //     handler(newValue, oldValue) {
     //         console.log('newValuenewValuenewValuenewValue')
@@ -70,5 +71,4 @@ export default {
   }
 };
 </script>
-<style lang='scss' scoped>
-</style>
+<style lang="scss" scoped></style>

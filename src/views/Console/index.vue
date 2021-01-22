@@ -8,16 +8,12 @@ export default {
   name: "ConsoleIndex",
   components: {},
   props: {},
-  mounted(){
+  mounted() {
     OrderList({
       pageSize: 10,
       pageNumber: 1
-    }).then(response => {
-
-    })
+    }).then(response => {});
   }
-  
-}
+};
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
